@@ -1,7 +1,8 @@
 import React from 'react';
+import { HomePage } from './pages/HomePage';
 
 function App() {
-  return <h1>Metar</h1>;
+  return <HomePage />;
 }
 
 export default App;
