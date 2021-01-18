@@ -1,22 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 export const AWFetch = (props) => {
-    
+
     useEffect(() => {
-        console.log("log1")
-        fetch(`https://www.aviationweather.gov/adds/dataserver_current/httpparam?datasource=metars&requestType=retrieve&format=xml&mostRecentForEachStation=constraint&hoursBeforeNow=3&stationString=${props.ICAO}`, {
+        fetch(`https://api.checkwx.com/metar/${props.ICAO}/decoded`, {
             method: 'GET',
             mode: 'cors',
             headers: {
-                'Content-Type': 'text/xml'
+                'X-API-Key': process.env.REACT_APP_API_KEY
               },
         })
-            .then((response) => console.log(response))
-            // .then((response) => response.json())
-            // .then((data) => {
-            //     console.log(data)
-            //     setXml(() => data)
-            // });
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data)
+            });
     }, []);
 
     return (
