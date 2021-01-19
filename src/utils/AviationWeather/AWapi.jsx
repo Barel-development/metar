@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 
-export const AWFetch = (props) => {
+export const AWFetch = (ICAO) => {
+    const [value, setValue] = useState({})
 
-    useEffect(() => {
-        fetch(`https://api.checkwx.com/metar/${props.ICAO}/decoded`, {
+    fetch(`https://api.checkwx.com/metar/${ICAO}/decoded`, {
             method: 'GET',
             mode: 'cors',
             headers: {
@@ -12,11 +12,10 @@ export const AWFetch = (props) => {
         })
             .then((response) => response.json())
             .then((data) => {
-                console.log(data)
+                setValue(data)
             });
-    }, []);
 
     return (
-        <div>"ahoj"</div>
+        console.log(value)
     )
 };
