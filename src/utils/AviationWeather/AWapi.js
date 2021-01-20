@@ -1,7 +1,4 @@
-import React, { useState } from 'react';
-
 export const AWFetch = (ICAO) => {
-    const [value, setValue] = useState({})
 
     fetch(`https://api.checkwx.com/metar/${ICAO}/decoded`, {
             method: 'GET',
@@ -12,10 +9,8 @@ export const AWFetch = (ICAO) => {
         })
             .then((response) => response.json())
             .then((data) => {
-                setValue(data)
+                return (
+                    console.log(data)
+                )
             });
-
-    return (
-        console.log(value)
-    )
 };
