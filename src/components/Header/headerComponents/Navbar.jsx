@@ -1,15 +1,10 @@
 import { React, useState } from 'react';
 import './navbar.css';
 
-export const NavBar = (props) => {
+export const Navbar = (props) => {
   const [menuOpened, setMenuOpened] = useState(false);
 
-  const handleSelectItem = () => {
-    setMenuOpened(!menuOpened);
-  };
-
   return (
-    <>
       <nav className="nav_mobil">
         <button
           className={menuOpened ? 'hamburger hamburger--opened' : 'hamburger'}
@@ -17,23 +12,14 @@ export const NavBar = (props) => {
           onClick={() => {
             setMenuOpened(!menuOpened);
           }}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        ></button>
         {menuOpened && (
           <ul className="menu-items">
-            {props.showLPLinks && <li>Kontakty</li>}
+            <li className="menu-item">
+              <a href="#kontakty">Kontakty</a>
+            </li>
           </ul>
         )}
       </nav>
-
-      <nav className="nav_desktop">
-        <ul className="menu-items menu-items-desktop">
-          {props.showLPLinks && <li>Kontakty</li>}
-        </ul>
-      </nav>
-    </>
   );
 };

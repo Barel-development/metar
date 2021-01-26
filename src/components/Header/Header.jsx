@@ -5,8 +5,8 @@ import './header.css';
 export const Header = () => {
   return (
     <div className="header">
-      <span>METAR</span>
-      <span>SearchBar</span>
+      <span>*METAR</span>
+      <span>*SearchBar</span>
       <Navbar />
     </div>
   );
