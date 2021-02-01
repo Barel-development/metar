@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import React, { useState } from 'react';
 import './navbar.css';
 
 export const Navbar = (props) => {

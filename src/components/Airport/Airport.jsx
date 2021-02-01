@@ -1,4 +1,4 @@
-import { React } from 'react';
+import React from 'react';
 import { Metar } from '../Metar/Metar.jsx';
 
 export const Airport = () => {
