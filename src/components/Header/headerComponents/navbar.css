@@ -12,7 +12,8 @@
   background-position: center;
   background-color: transparent;
   cursor: pointer;
-  margin: 0;
+  margin-right: 0;
+  margin-left: auto;
 }
 
 .hamburger--opened {
