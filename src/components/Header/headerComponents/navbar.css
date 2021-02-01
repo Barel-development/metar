@@ -1,0 +1,40 @@
+.nav {
+  position: relative;
+}
+
+.hamburger {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-image: url('../../../images/icons/question_mark.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 0;
+}
+
+.hamburger--opened {
+  background-image: url('../../../images/icons/cross.svg');
+  /*  position: absolute;
+  right: 16px; */
+}
+
+.menu-items {
+  display: block;
+
+  max-width: 100%;
+  font-size: 16px;
+  padding: 0;
+}
+
+.menu-item {
+  list-style-type: none;
+  padding: 0;
+}
+.menu-item a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 16px;
+}
