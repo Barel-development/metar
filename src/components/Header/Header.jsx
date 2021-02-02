@@ -3,11 +3,11 @@ import { Navbar } from './headerComponents/Navbar.jsx';
 import './header.css';
 import { SearchBox } from '../SearchBox/SearchBox.jsx';
 
-export const Header = () => {
+export const Header = (props) => {
   return (
     <div className="header">
       <span>*METAR</span>
-      <SearchBox />
+      <SearchBox icao={props.icao} onChange={props.onChange} />
       <Navbar />
     </div>
   );
