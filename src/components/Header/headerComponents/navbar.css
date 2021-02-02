@@ -1,5 +1,6 @@
 .nav {
   position: relative;
+  margin: 0;
 }
 
 .hamburger {
@@ -12,22 +13,21 @@
   background-position: center;
   background-color: transparent;
   cursor: pointer;
-  margin-right: 0;
+  margin-right: 16px;
   margin-left: auto;
 }
 
 .hamburger--opened {
   background-image: url('../../../images/icons/cross.svg');
-  /*  position: absolute;
-  right: 16px; */
 }
 
 .menu-items {
   display: block;
-
   max-width: 100%;
   font-size: 16px;
   padding: 0;
+  text-align: right;
+  margin: 16px 16px 16px 0;
 }
 
 .menu-item {
@@ -37,5 +37,5 @@
 .menu-item a {
   text-decoration: none;
   color: #ffffff;
-  padding: 16px;
+  padding: 8px;
 }

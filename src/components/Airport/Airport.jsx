@@ -13,7 +13,7 @@ export const Airport = (props) => {
 
   return (
     <>
-      {data && (<div>{data.data[0].station.name}</div>)}
+      {console.log(data) && (<div>{data.data[0].station.name}</div>)}
       <Metar />
     </>
   );
