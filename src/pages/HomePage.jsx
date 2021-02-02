@@ -12,8 +12,9 @@ export const HomePage = () => {
   return (
     <>
       <Header icao={icao} onChange={handleChangeICAO} />
-      <div>Home Page</div>
-      <Airport call={icao} />
+      <div className="homepageDiv">
+        <Airport call={icao} />
+      </div>
     </>
   );
 };
